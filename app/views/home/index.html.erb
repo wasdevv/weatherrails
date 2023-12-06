@@ -1,3 +1,14 @@
-<div class="text-center">
-  <p>oi</p>
-</div>
+<%= form_with(url: home_index_path, method: :get, local: true) do |form| %>
+  <%= form.label :city, 'City Name' %>
+  <%= form.text_field :city %>
+  <%= form.submit 'Search City' %>
+<% end %>
+
+<% if @data %>
+ <div class="text-center">
+   <h2>Weather for <%= @city %>:</h2>
+   <p>Temperature: <%= @data['main']['temp'] %>K</p>
+   <%# <p>Humidity: <%= @data['main']['humidity'] %>%</p> 
+   <p>Weather: <%= @wdata['weather'][0]['description'] %></p>
+  </div>
+<% end %>

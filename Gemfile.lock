@@ -249,7 +249,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-  httparty (~> 0.21.0)
+  httparty
   importmap-rails
   jbuilder
   puma (>= 5.0)
